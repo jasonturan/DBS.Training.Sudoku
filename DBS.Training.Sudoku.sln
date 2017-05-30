@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DBS.Training.Sudoku", "DBS.Training.Sudoku.fsproj", "{65F8303B-58CF-4AD8-B487-F296483361BF}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DBS.Training.Sudoku", "DBS.Training.Sudoku\DBS.Training.Sudoku.fsproj", "{65F8303B-58CF-4AD8-B487-F296483361BF}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DBS.Training.Sudoku.Tests", "..\DBS.Training.Sudoku.Tests\DBS.Training.Sudoku.Tests.fsproj", "{AF087667-B10B-4EE8-9096-B53C756F035A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "DBS.Training.Sudoku.Tests", "DBS.Training.Sudoku.Tests\DBS.Training.Sudoku.Tests.fsproj", "{AF087667-B10B-4EE8-9096-B53C756F035A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

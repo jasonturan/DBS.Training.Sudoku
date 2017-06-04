@@ -51,7 +51,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
-    <Compile Include="Main.fs" />
+    <Compile Include="SudokuSolver.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

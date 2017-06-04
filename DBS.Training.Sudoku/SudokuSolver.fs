@@ -1,4 +1,4 @@
-﻿module SudokuSolver
+﻿module DBS.Training.Sudoku.SudokuSolver
 open System.Linq 
 open System 
 let columnCount =9 
@@ -60,6 +60,4 @@ let rec Solve (p:int[,]) : Option<int[,]> =
                         let newPuzzle = ConstructNewPuzzle(p,x,y, newVal) 
                         Solve(newPuzzle)) None choices
                 sp          
-            |None -> failwith "Should have found the next unsolved"    
- 
-
+            |None -> failwith "Should have found the next unsolved"

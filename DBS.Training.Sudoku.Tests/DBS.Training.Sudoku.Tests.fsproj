@@ -52,9 +52,6 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="SudokuTests.fs" />
-    <Content Include="sudoku.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="packages.config" />
     <Compile Include="Main.fs" />
   </ItemGroup>

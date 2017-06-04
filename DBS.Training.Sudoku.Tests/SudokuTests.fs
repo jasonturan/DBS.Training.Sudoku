@@ -8,7 +8,7 @@ open DBS.Training.Sudoku.SudokuSolver
 
 [<TestClass>]
 type TestSudoku() =    
-    member this.CreateUnsolvedPuzzle =
+    member this.UnsolvedPuzzle =
         let unsolvedArrays = [| 
                 [| 8;2;7;1;5;4;3;9;6 |];
                 [| 9;6;5;3;2;7;1;4;8 |];
@@ -22,7 +22,7 @@ type TestSudoku() =
            |]
         Array2D.init columnCount rowCount (fun i j -> unsolvedArrays.[i].[j])
             
-    member this.CreateSolvedPuzzle =  
+    member this.SolvedPuzzle =  
         let solvedArrays = [| 
                 [| 8;2;7;1;5;4;3;9;6 |];
                 [| 9;6;5;3;2;7;1;4;8 |];
@@ -100,15 +100,15 @@ type TestSudoku() =
 
     [<TestMethod>]
     member this.ShouldGetNextUnsolved() = 
-        let nextToSolve = GetNextUnsolved this.CreateUnsolvedPuzzle 
+        let nextToSolve = GetNextUnsolved this.UnsolvedPuzzle 
         Assert.AreEqual(Some((8,7)), nextToSolve)
 
-        let solved = GetNextUnsolved this.CreateSolvedPuzzle 
+        let solved = GetNextUnsolved this.SolvedPuzzle 
         Assert.AreEqual(None, solved)            
 
     [<TestMethod>]
     member this.ShouldEvaluatePuzzle() =
         let newPuzzle = GetFirstPuzzle()
         Assert.IsFalse(HasBeenSolved newPuzzle)         
-        Assert.IsFalse(HasBeenSolved this.CreateUnsolvedPuzzle) 
-        Assert.IsTrue(HasBeenSolved this.CreateSolvedPuzzle)
+        Assert.IsFalse(HasBeenSolved this.UnsolvedPuzzle) 
+        Assert.IsTrue(HasBeenSolved this.SolvedPuzzle)
